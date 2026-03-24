@@ -1,0 +1,157 @@
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat-hint {
+  position: fixed;
+  bottom: 30px;
+  right: 90px;
+  background: #fff;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Chat box */
+.chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.chat-header {
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-close {
+  cursor: pointer;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  background: #f4f4f4;
+  overflow-y: auto;
+}
+
+.chat-message {
+  max-width: 80%;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.chat-message.bot {
+  background: #e0e0e0;
+  align-self: flex-start;
+}
+
+.chat-message.user {
+  background: #000;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.chat-send {
+  margin-left: 8px;
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ⏳ Typing Indicator */
+.chat-typing {
+  display: flex;
+  gap: 4px;
+}
+
+.chat-typing span {
+  width: 6px;
+  height: 6px;
+  background: #555;
+  border-radius: 50%;
+  animation: chat-blink 1.4s infinite both;
+}
+
+.chat-typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.chat-typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes chat-blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+/* 🔹 Suggestion Chips */
+.chat-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.chat-chips button {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chat-chips button:hover {
+  background: #000;
+  color: #fff;
+}

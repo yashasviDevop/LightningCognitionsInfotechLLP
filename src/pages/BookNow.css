@@ -1,0 +1,269 @@
+/* BookNow.css */
+
+.booknow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.booknow-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.booknow-card h1 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #1976d2;
+}
+
+.form-section h2 {
+  color: #1976d2;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-section h3 {
+  color: #424242;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #424242;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.checkbox-grid label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-grid label:hover {
+  background-color: #e3f2fd;
+}
+
+.checkbox-grid input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #1976d2;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.radio-group label:hover {
+  background-color: #e3f2fd;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #1976d2;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.service-card {
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  font-weight: 500;
+  color: #424242;
+}
+
+.service-card:hover {
+  border-color: #1976d2;
+  background: #e3f2fd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-card.selected {
+  border-color: #1976d2;
+  background: #1976d2;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.sub-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.sub-section h4 {
+  color: #1976d2;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.floating-submit-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.floating-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+}
+
+.floating-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booknow-card {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .booknow-card h1 {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 15px;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+
+  .floating-submit-btn {
+    bottom: 10px;
+    right: 10px;
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booknow-container {
+    padding: 10px;
+  }
+
+  .booknow-card {
+    padding: 15px;
+  }
+
+  .form-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .floating-submit-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

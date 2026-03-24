@@ -1,0 +1,174 @@
+/* ============================= */
+/* 🌩 LIGHTNING COGNITIONS HERO  */
+/* ============================= */
+
+.home-wrapper {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔹 Hero Background Image */
+.hero-bg {
+  background-image: url("https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  filter: brightness(0.5);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 🔹 Dark Overlay for Contrast */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* 🔹 Hero Content Styling */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+/* Headline */
+.hero-title {
+  font-size: 2rem; /* mobile-friendly */
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem; /* small tablets */
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem; /* tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4.5rem; /* desktops */
+  }
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+  opacity: 0.9;
+}
+
+@media (min-width: 480px) {
+  .hero-subtext {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-subtext {
+    font-size: 1.2rem;
+  }
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CTA Button */
+.hero-btn {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.6);
+}
+
+/* Sticky Navbar Fix */
+nav {
+  position: relative;
+  z-index: 50; /* keeps navbar above hero backgrounds */
+}
+
+/* Scroll Down Section */
+.after-hero {
+  background: #ffffff;
+  color: #111827;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.after-hero h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.after-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* Floating Pulse Animation */
+.animate-pulse-slow {
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow-delay {
+  animation: pulse 6s ease-in-out 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up-delay {
+    animation: slideUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up-delay-2 {
+    animation: slideUp 1s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-pulse-slow-delay {
+    animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) 2s infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+
+  .animate-float {
+    animation: float linear infinite;
+  }
+
+  .animate-scroll {
+    animation: scroll 2s ease-in-out infinite;
+  }
+
+  .page-transition {
+    animation: pageTransition 0.5s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scroll {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes pageTransition {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+@keyframes dnaLeft {
+  0% { transform: translateX(-12px) rotate(0deg); }
+  100% { transform: translateX(12px) rotate(360deg); }
+}
+
+@keyframes dnaRight {
+  0% { transform: translateX(12px) rotate(0deg); }
+  100% { transform: translateX(-12px) rotate(360deg); }
+}
+
+.animate-dna-left {
+  animation: dnaLeft 6s linear infinite;
+}
+
+.animate-dna-right {
+  animation: dnaRight 6s linear infinite;
+}
