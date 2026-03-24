@@ -15,11 +15,7 @@ import Ourwork from "./pages/OurWork.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import Terms from "./pages/Terms.jsx";
-import { HashRouter } from "react-router-dom";
 
-<HashRouter>
-  <App />
-</HashRouter>
 
 
 function App() {
